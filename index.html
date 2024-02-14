@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+                    <!-- <source src="asset/backvv.mp4" type="video/mp4"> -->
+                     <source src="Assets/backv4.mp4" type="video/mp4">
+                  </video>
+    <div id="hero">
+        <div id="details">
+            <h3>Easy Image Editor</h3>
+            <div id="edittools">
+                <label for="Filters" class="lab">Filters</label> <br><br>
+                <div id="imgtools">
+                    <div id="btns">
+                        <button id="brightness">Brightness</button>
+                        <button id="Saturation">Saturation</button>
+                    </div>
+                    <div id="btns">
+                        <button id="Inversion">Inversion</button>
+                        <button id="Greyscale">Greyscale</button>
+                    </div>
+                    <div id="btns">
+                        <button id="serpia">Sepia</button>
+                        <button id="blur">Blur</button>
+                    </div>
+                    
+                </div>
+
+                <div id="prog">
+                    <div id="top_detail"> <label for="tool" id="tool">Saturation</label> <p id="val">100%</p></div>
+                    <div id="mete"> 
+                        <input type="range" id="selet" min="0" max="10" value="5" step="1">
+                        <!-- <progress id="selet" value="50" max="100">
+                    </progress> -->
+                 </div>
+                </div>
+                <div id="turn">
+                    <label for="turntitle" class="lab">Rotate & Flip</label> <br>
+                    <div id="turntools">
+                        <div id="btnss">
+                            <button id="anticlock"><img src="Assets/rotate-left.png" alt=""> </button>
+                            <button id="clock"> <img src="Assets/rotate-right.png" alt=""></button>
+                            <button id="flipup"><img src="Assets/flip.png" alt=""> </button>
+                            <button id="flipside"><img src="Assets/flip (1).png" alt=""></button>
+                        </div>
+                      
+                    </div>
+            </div>
+         </div>
+         <input type="reset" value="Reset" id="res">
+        </div>
+    <div id="imageplace">
+                    <div id="imgbox">
+                        <img src="Assets/add.jpg" id="image" alt="">
+                    </div>
+            <div id="imgchange"> 
+                <!-- <input type="file" name="Choose Image" id="chooseimg"> -->
+                <!-- <button id="chooseimg">Choose Image</button> -->      
+                
+                    <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+                    <label for="file" style="cursor: pointer;" id="chooseimg">Upload Image</label>
+
+                    <button id="save" onclick="setInterval()">Save</button>
+                
+
+                <!-- <button id="save"><a href="link" download="PC/Desktop">Save</a></button> -->
+
+            </div>
+    </div>
+
+    </div>
+    
+</body>
+<script src="js/script.js" ></script>
+</html>
